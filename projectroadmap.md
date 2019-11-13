@@ -4,7 +4,7 @@
 - [x] Create Readme - **Ian**
 - [x] Create systems blueprinting flowchart - **Ryan**
 - [x] Create the project roadmap - **Ryan**
-- [ ] Evaluate https://github.com/JiajunJasonLi/grade_calculator to decide if it should be incorporated into the project or not. - **Ryan**
+- [x] Evaluate https://github.com/JiajunJasonLi/grade_calculator to decide if it should be incorporated into the project or not. - **Ryan**
 - [ ] Evaluate https://github.com/cakmakaf/grade_calculator to decide if it should be incorporated into the project or not. - **Ian**
 - [ ] Create external files for storing each grade and their weights. - **Ian**
 - [ ] Design and write code for the user interface side including text prompts and user imputs. - ****
