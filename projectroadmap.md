@@ -1,4 +1,4 @@
-<h1>Project Grade Calculator Roadmap 
+<h1>Project Grade Calculator Roadmap </h1>
 
 - [x] Create code repository on Github - **Ryan** 
 - [x] Create Readme - **Ian**
