@@ -1,4 +1,4 @@
-Project Grade Calculator Roadmap <h2>
+Project Grade Calculator Roadmap <h1>
 - [x] Create code repository on Github - **Ryan** 
 - [x] Create Readme - **Ian**
 - [x] Create systems blueprinting flowchart - **Ryan**
