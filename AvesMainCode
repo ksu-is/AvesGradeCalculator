@@ -1,29 +1,52 @@
- #This will be our scale for grading, will need afjusting for more accuracy based on KSU's grading standards
- adjusted = "AA"
+#Main formatting, recycled from our 3rd code database.
+def grade_calculator(line):
+    line = line[:-1]
+    list = line.split(",")
+    name = list[0]
+
+#This is the list of assignments. Our example class is an entry level Biology class.
+#There are 25 students, and the assignments are few with a high weight to each. 
+    
+    pretest = int(list[1])
+    carbon_date_project = int(list[2])
+    test_1 = int(list[3])
+    homework_1 = int(list[4])
+    test_2 = int(list[5])
+    homework_2 = int(list[6])
+
+#This is the formula for applying weight to the grade scores.
+final_grade = grade_1 * (25/100) + grade_2 * (25/100) + grade_3 * (50/100)
+
+    if (final_grade >= 90):
+
+        adjusted = "A"
     elif (final_grade >= 85):
-        adjusted = "BA"
+        adjusted = "B+"
     elif (final_grade >= 80):
-        adjusted = "BB"
+        adjusted = "B"
     elif (final_grade >= 75):
-        adjusted = "CB"
+        adjusted = "C+"
     elif (final_grade >= 70):
-        adjusted = "CC"
+        adjusted = "C"
     elif (final_grade >= 65):
-        adjusted = "DC"
-    elif (final_grade >= 60):
-        adjusted = "DD"
-    elif (final_grade >= 55):
-        adjusted = "FD"
+        adjusted = "D"
     else:
-        adjusted = "FF"
+        adjusted = "F"
 
-#Should we considering factoring grade weighting and how it will affect how meaningful a grade is? I think the fractions are percentage weight. May be easier than we think.
+    return name + "-------------> " + adjusted + "\n"
 
-#sample grades to place in a .txt file for reference and to pull for input for the calculator
-assignment_1 .10 90
-project_1 87
-attendance 75
-midterm 0.35 90
-quizzes 0.2 90 90 95 100
 
-#Should we have a GUI?
+#Command to source input data from "classgradelist.txt". Student grades are held within.
+with open("classgradelist.txt","r",encoding= "utf-8") as file:
+
+    list_of_students = []
+
+    for i in file:
+
+        list_of_students.append(grade_calculator(i))
+
+#Output formula
+    with open("finalgradelist.txt","w",encoding="utf-8") as new_file:
+
+        for i in list_of_students:
+            new_file.write(i)
